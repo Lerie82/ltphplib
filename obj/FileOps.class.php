@@ -6,6 +6,8 @@ date: 2021
 */
 class FileOps
 {
+	///readUTF8File
+	///read a file with a UTF-8 charset
 	function readUTF8File($file)
 	{
 		$handle = fopen($filename, "r");
@@ -14,7 +16,9 @@ class FileOps
 		return $contents;
 	}
 
-	function getFile($file)
+	///getFileContents
+	///return the contents of a file
+	function getFileContents($file)
 	{
 		$handle = fopen($filename, "r");
 		$contents = fread($handle, filesize($filename));
@@ -22,6 +26,8 @@ class FileOps
 		return $contents;
 	}
 
+	///bin2hex
+	///binary file to hex output
 	function bin2Hex($file)
 	{
 	    $handle = @fopen($file);
@@ -33,6 +39,7 @@ class FileOps
 	        {
 	            $hex .= bin2hex(fread($handle, 4));
 	        }
+
 	        fclose($handle);
 	    }
 

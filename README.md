@@ -1,3 +1,6 @@
 # ltphplib
 
-updates.
+A PHP Library.
+
+- File Operations
+- PDO Wrapper
